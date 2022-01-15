@@ -10,7 +10,7 @@
 
 <hr>
 
-### 📚 Flow를 공부과정..
+### 📚 Flow를 공부과정..(아직 한참 멀었음😤)
 https://abrasive-ziconium-edb.notion.site/Flow-14b57895d8f34f6ab2eb73a84d180578
 
 참고
