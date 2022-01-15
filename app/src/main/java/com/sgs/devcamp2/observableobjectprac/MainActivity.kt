@@ -45,16 +45,17 @@ class MainActivity : AppCompatActivity() {
             binding.tvLivedata.text = it
         }
 
+        // 1, 2중 하나만 실행된다. SharedFlow의 동작을 보기위해선 1의 주석처리가 필요함
         lifecycleScope.launchWhenStarted {
-            // StateFlow
-//            viewModel.stateFlow.collectLatest {
-//                Snackbar.make(binding.root, it, Snackbar.LENGTH_LONG).show()
-//            }
-
-            // SharedFlow
-            viewModel.sharedFlow.collectLatest {
+            // 1. StateFlow
+            viewModel.stateFlow.collectLatest {
                 Snackbar.make(binding.root, it, Snackbar.LENGTH_LONG).show()
             }
+
+            // 2. SharedFlow
+//            viewModel.sharedFlow.collectLatest {
+//                Snackbar.make(binding.root, it, Snackbar.LENGTH_LONG).show()
+//            }
         }
     }
 }
